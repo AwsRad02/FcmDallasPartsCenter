@@ -1,0 +1,5 @@
+create a function if the same part number entered again i need to add the trim  to the same make and model and year compatible trim 
+the admin want to add more data like he add a 2018 Chevrolet Equinox LS front bumper and the part number is the same as LT trim 
+i dont need the function create another collection i need it to add trim LS inside the compatible trims only update the data we not create another one
+
+update part or update price

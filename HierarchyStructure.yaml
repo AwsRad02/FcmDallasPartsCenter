@@ -1,0 +1,105 @@
+make_model_parts:
+  chevyMalibu:
+    parts:
+      front_bumper_upper:
+        part_name: "Front Bumper Upper"
+        trim: "LT"
+        year_from: 2018
+        year_to: 2021
+        price_from: 200
+        price_to: 250
+        oem_part_number: "135156545"
+        compatible_years:
+          - 2018
+          - 2019
+          - 2020
+          - 2021
+        compatible_trims:
+          - "LT"
+          - "LS"
+      grille:
+        part_name: "Grille"
+        trim: "LT"
+        year_from: 2018
+        year_to: 2021
+        price_from: 180
+        price_to: 250
+        oem_part_number: "135154545"
+        compatible_years:
+          - 2018
+          - 2019
+          - 2020
+          - 2021
+        compatible_trims:
+          - "LT"
+          - "LS"
+
+  toyotaCamry:
+    parts:
+      front_bumper_upper:
+        part_name: "Front Bumper Upper"
+        trim: "LT"
+        year_from: 2018
+        year_to: 2021
+        price_from: 200
+        price_to: 250
+        oem_part_number: "135156545"
+        compatible_years:
+          - 2018
+          - 2019
+          - 2020
+          - 2021
+        compatible_trims:
+          - "LT"
+          - "LS"
+      grille:
+        part_name: "Grille"
+        trim: "LT"
+        year_from: 2018
+        year_to: 2021
+        price_from: 180
+        price_to: 250
+        oem_part_number: "135154545"
+        compatible_years:
+          - 2018
+          - 2019
+          - 2020
+          - 2021
+        compatible_trims:
+          - "LT"
+          - "LS"
+
+  chevyEquinox:
+    parts:
+      front_bumper_upper:
+        part_name: "Front Bumper Upper"
+        trim: "LT"
+        year_from: 2018
+        year_to: 2021
+        price_from: 200
+        price_to: 250
+        oem_part_number: "135156545"
+        compatible_years:
+          - 2018
+          - 2019
+          - 2020
+          - 2021
+        compatible_trims:
+          - "LT"
+          - "LS"
+      grille:
+        part_name: "Grille"
+        trim: "LT"
+        year_from: 2018
+        year_to: 2021
+        price_from: 180
+        price_to: 250
+        oem_part_number: "135154545"
+        compatible_years:
+          - 2018
+          - 2019
+          - 2020
+          - 2021
+        compatible_trims:
+          - "LT"
+          - "LS"

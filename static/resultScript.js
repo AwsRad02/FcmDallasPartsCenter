@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const rawData = localStorage.getItem("partsResults");
-  
+  const rawData = localStorage.getItem("partsResult");
 
   if (!rawData) {
     document.getElementById("results").innerHTML = "<p>No parts found.</p>";
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const parts = JSON.parse(rawData);
-    console.log("✅ Parts loaded from storage:", parts); 
+  console.log("✅ Parts loaded from storage:", parts); 
 
   const resultsContainer = document.getElementById("results");
 
@@ -19,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const img = document.createElement("img");
     img.className = "part-image";
     let partName = (part.partName || "").toLowerCase().replace(/\s+/g, "_");
-    img.src = `images/${partName}.png`;
-    img.onerror = () => img.src = 'images/default.png';
-    
+    img.src = `/static/images/${partName}.png`;
+    img.onerror = () => img.src = '/static/images/default.png';
 
     const name = document.createElement("h3");
     name.className = "part-name";
@@ -36,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     price.innerHTML = `<strong>Price:</strong> $${part.price_from} - $${part.price_to}`;
 
     const years = document.createElement("p");
-    years.className = "part-info";
     years.className = "part-info years";
     years.innerHTML = `<strong>Years:</strong> ${part.compatible_years.join(', ')}`;
 
@@ -53,6 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultsContainer.appendChild(card);
   });
-  localStorage.removeItem('partsResults'); // remove the data from local server 
-});
 
+  localStorage.removeItem('partsResults'); // Cleanup after rendering
+});

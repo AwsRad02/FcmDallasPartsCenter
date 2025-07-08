@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parts Compatibility Checker</title>
-  <link rel="stylesheet" href="homeStyle.css">
-  <script type="module" src="homeScript.js"></script>
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homeStyle.css') }}?v=2">
 </head>
 <body>
   <div class="logo">FCM Dallas</div>
@@ -17,35 +15,36 @@
     <input type="text" id="vehicle-input" placeholder="Enter vehicle info e.g., 2023 Toyota Camry LE" />
     <div class="button-group">
       <button class="search-btn" id="search-button" name="search-button">Search</button>
+      <div id="alertBoxContainer"></div>
       <button class="ai-btn" disabled>AI Tool (Coming Soon)</button>
       <p class="note">*AI-powered recommendations will be available in future updates.</p>
-      <button class="labor-btn" onclick="location.href='laborCost.html'">Labor Cost Sheet</button>
+      <button class="labor-btn" id="labor-button">Labor Cost Sheet</button>
     </div>
   </div>
   <div class="square-card-section">
   <div class="square-card-container">
     <div class="square-card">
-      <img src="images/hondLogo.png" alt="">
+      <img src="static/images/hondLogo.png" alt="">
       <p>Honda</p>
     </div>
     <div class="square-card">
-      <img src="images/fordLogo.png" alt="Body Work">
+      <img src="static/images/fordLogo.png" alt="Body Work">
       <p>Ford</p>
     </div>
     <div class="square-card">
-      <img src="images/lexusLogo" alt="Parts">
+      <img src="static/images/lexusLogo" alt="Parts">
       <p>Lexus</p>
     </div>
     <div class="square-card">
-      <img src="images/toyotaLogo.png" alt="Parts">
+      <img src="static/images/toyotaLogo.png" alt="Parts">
       <p>Toyota</p>
     </div>
     <div class="square-card">
-      <img src="images/chevrolteLogo.png" alt="Parts">
+      <img src="static/images/chevrolteLogo.png" alt="Parts">
       <p>Chevrolet </p>
     </div>
     <div class="square-card">
-      <img src="images/gmcLogo.png" alt="Parts">
+      <img src="static/images/gmcLogo.png" alt="Parts">
       <p>GMC</p>
     </div>
     
@@ -59,7 +58,8 @@
   </div>
 
   <div class="developer-note">Developed by Aws Raadideh</div>
+  <div id="alertBoxContainer"></div>
+  <script type="module" src="{{ url_for('static', filename='homeScript.js') }}"></script>
 
-  
 </body>
 </html>

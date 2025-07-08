@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Labor Cost Cards</title>
-  <link rel="stylesheet" href="labor.css" />
-  <script defer src="labor.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/labor.css') }}">
+  <script defer src="{{ url_for('static', filename='labor.js') }}"></script>
 </head>
 <body>
   <div class="container">
-    <h1>Labor Cost Sedan</h1>
+    <h1>Labor Cost - Sedan</h1>
     <div id="results" class="parts-grid">
       <!-- Labor cards will be injected here -->
     </div>

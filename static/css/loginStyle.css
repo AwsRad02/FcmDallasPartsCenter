@@ -119,10 +119,11 @@ button {
 button:hover {
   background-color: #005599;
 }
-.email-icon {
-  background-image: url('iconEmail.png'); /* Replace with your actual image */
-}
 
+
+.email-icon {
+  background-image: url("/static/images/iconEmail.png");
+}
 .password-icon {
-  background-image: url('IconLock.png'); /* Replace with your actual image */
+  background-image: url('/static/images/IconLock.png');
 }

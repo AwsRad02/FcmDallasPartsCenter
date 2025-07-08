@@ -1,19 +1,9 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc,updateDoc,arrayUnion,collection,getAuth,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc,updateDoc,arrayUnion,collection } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebaseconfig.js";
 
-
-
-
-const auth = getAuth(firebaseConfig);
-onAuthStateChanged(auth, (user) => {
-  if (!user) {
-    //if user not authorized return to login 
-    window.location.href = "login.html";
-  }
-});
-
+  
   
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

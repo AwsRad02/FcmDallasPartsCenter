@@ -2,12 +2,22 @@ from flask import Flask ,jsonify,render_template,request,redirect, session,url_f
 import requests
 import os 
 from google.cloud import firestore
+import json
+import tempfile
 
-app=Flask(__name__)
-app.secret_key="key" #import form env
+credentials_json = os.getenv("GOOGLE_CREDENTIALS_JSON")
+if not credentials_json:
+    raise ValueError("GOOGLE_CREDENTIALS_JSON environment variable is missing")
 
-FIREBASE_API_KEY="AIzaSyBPNN0EsjDLT0onoR6zs-o0t9BKwX8Ycdc" # Replace this with your Firebase Web API Key (not service account)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credentials/firebaseconfig.json"
+with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".json") as temp:
+    temp.write(credentials_json)
+    temp.flush()
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = temp.name
+
+app = Flask(__name__)
+app.secret_key = "key" 
+
+FIREBASE_API_KEY = "AIzaSyBPNN0EsjDLT0onoR6zs-o0t9BKwX8Ycdc"
 
 db = firestore.Client()
 
